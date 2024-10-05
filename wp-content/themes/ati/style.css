@@ -1,0 +1,802 @@
+/*
+	Theme Name: Boilerplate
+	Theme URI: http://aarontgrogg.com/boilerplate/
+	Description: A merger created by Aaron T. Grogg (<a href="http://aarontgrogg.com/">http://aarontgrogg.com/</a>) of the HTML5 Boilerplate (<a href="http://html5boilerplate.com/">http://html5boilerplate.com/</a>) and the Starkers theme (<a href="http://starkerstheme.com/">http://starkerstheme.com/</a>), Boilerplate: Starkers provides developers with an ideal, bleeding-edge, clean-start theme.  Mark-up is minimal (thanks Elliott) and the most edge-case web technology is baked right in (thanks Paul, Divya and a large cast of supporting characters)!  Boilerplate themes are designed to serve as a Parent theme to whatever Child (<a href="http://codex.wordpress.org/Child_Themes">http://codex.wordpress.org/Child_Themes</a>) you care to add, but you could just as easily use this as a starting point and alter the PHP as your design needs.  More about this theme can be found at <a href="http://aarontgrogg.com/boilerplate/">http://aarontgrogg.com/boilerplate/</a>.
+	Author: Aaron T. Grogg, based on the work of Paul Irish, Divya Manian, and Elliot Jay Stocks
+	Author URI: http://aarontgrogg.com/
+	Version: 3.4.4
+	Tags: custom-menu, editor-style, theme-options, threaded-comments, sticky-post, microformats, rtl-language-support, translation-ready
+
+	License: GNU General Public License v2.0
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+	This CSS file is a concatenation of style.css from HTML5 Boilerplate and style.css from Starkers.
+	Comment blocks indicate where each begins and ends, like this, for example...
+*/
+
+/** START HTML5 Boilerplate CSS **/
+
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ *
+ * ==|== normalize ==========================================================
+ */
+
+
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+
+@font-face {
+	font-family: system-ui, 'myfont';
+	src: url('/wp-content/themes/ati/georgia.eot');
+	src: local('?'), url('/wp-content/themes/ati/georgia.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+body { margin: 0; font-size:13px; font-family:system-ui, 'myfont'; line-height: 1.4; background:#084b8d; }
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover, a:active { outline: 0; }
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/i/440
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+/*
+ * Correct overflow not hidden in IE9
+ */
+
+svg:not(:root) { overflow: hidden; }
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure { margin: 0; }
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label { cursor: pointer; width: 110px; display: inline-block;}
+
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
+ */
+
+legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ */
+
+button, input { line-height: normal; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+
+button[disabled], input[disabled] { cursor: default; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+/*
+ * Remove inner padding and border in FF3/4: h5bp.com/l
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/*
+ * 1. Remove default vertical scrollbar in IE6/7/8/9
+ * 2. Allow only vertical resizing
+ */
+
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+
+/* =============================================================================
+   Chrome Frame Prompt
+   ========================================================================== */
+
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+
+
+/* ==|== primary styles =====================================================
+   Author:
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==|== media queries ======================================================
+   EXAMPLE Media Query for Responsive Design.
+   This example overrides the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+
+
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+
+
+/* ==|== print styles =======================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+
+
+/** END HTML5 Boilerplate CSS **/
+
+
+/** START Starkers CSS **/
+
+/* LAYOUT */
+/* ----------------------------------------- */
+
+/* These rather presentational classes are generated by WordPress, so it's useful to have some styles for them. Edit as you see fit. More info: http://codex.wordpress.org/CSS */
+.aligncenter { display:block; margin:0 auto }
+.alignleft { float:left }
+.alignright { float:right }
+.wp-caption { border:1px solid #666; text-align:center; background:#ccc; padding:10px; margin:10px }
+
+/* You might find the following useful */
+/* div, ul, li { position:relative } This will save you having to declare each div / ul / li's position as 'relative' and allows you to absolutely position elements inside them
+br.clear { clear:both; display:block; height:1px; margin:-1px 0 0 0 } /* Use this br class to clear your floated columns */
+li#theme-switcher { background:#fff; border:10px solid red; padding:20px; position:fixed; top:0; right:0 } /* Use this if you have the Theme Switcher Reloaded plugin (http://themebot.com/webmaster-tools/1-wordpress-theme-switcher-reloaded) installed and want to make it nice and obvious */
+*/
+/* TYPOGRAPHY */
+/* ----------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 { font-weight:bold } /* This helps to identify headings at the initial build stage, so I thought it'd be useful to have it */
+.alert { background:red; color:white } /* 'alert' has a basic style, since it's useful to have it standing out for testing purposes.
+
+
+
+/* Font stack options
+
+	The following represents a list of font stacks, as recommended by Nathan Ford in
+	http://unitinteractive.com/blog/2008/06/26/better-css-font-stacks/
+
+	I've added inverted commas around the relevant family names to ensure compatibility.
+	p = balanced for paragraphs or body copy
+	t = balanced for headlines or titles
+
+	- - - -
+
+Arial, "Helvetica Neue", Helvetica, sans-serif - p, t
+
+Baskerville, "Times New Roman", Times, serif - p
+Baskerville, "Times, Times New Roman", serif - t
+
+Cambria, Georgia, Times, "Times New Roman", serif - p, t
+"Century Gothic", "Apple Gothic", sans-serif - p, t
+
+Consolas, "Lucida Console", Monaco, monospace - p, t
+
+"Copperplate Light", "Copperplate Gothic Light", serif - p, t
+
+"Courier New", Courier, monospace - p, t
+
+"Franklin Gothic Medium", "Arial Narrow Bold", Arial, sans-serif - p, t
+
+Futura, "Century Gothic", "Apple Gothic", sans-serif - p, t
+
+Garamond, "Hoefler Text", "Times New Roman", Times, serif - p
+Garamond, "Hoefler Text", Palatino, "Palatino Linotype", serif - t
+
+Geneva, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif - p
+Geneva, Verdana, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif - t
+
+Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif - p
+Georgia, Times, "Times New Roman", serif - t
+
+GillSans, Calibri, Trebuchet, sans-serif - p
+GillSans, Trebuchet, Calibri, sans-serif - t
+
+"Helvetica Neue", Arial, Helvetica, sans-serif - p
+Helvetica, "Helvetica Neue", Arial, sans-serif - t
+
+Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif - p, t
+
+"Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif - p, t
+
+Palatino, "Palatino Linotype", Georgia, Times, "Times New Roman", serif - p
+Palatino, "Palatino Linotype", "Hoefler Text", Times, "Times New Roman", serif - t
+
+Tahoma, Geneva, Verdana - p
+Tahoma, Verdana, Geneva - t
+
+Times, "Times New Roman", Georgia, serif - p, t
+
+Trebuchet, "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif - p
+Trebuchet, Tahoma, Arial, sans-serif - t
+
+Verdana, Geneva, Tahoma, sans-serif - p
+Verdana, Tahoma, Geneva, sans-serif - t
+
+*/
+
+/** END Starkers CSS **/
+
+/** START WordPress-Defined CSS Classes **/
+
+
+
+
+
+
+
+#primary{ float:right; width:700px; position:relative; top:-10px;}
+#secondary{ float:left; width:220px; position:relative;}
+.left-menu{width:220px;margin-top: -59px;}
+.left-menu h3{ background:url(/wp-content/themes/ati/images/title-bg.png) no-repeat 4px; padding:14px 0px 20px 40px; font-family:Verdana, Arial, Helvetica, sans-serif;text-shadow: 0px 0px 5px white; font-size:22px; color:black; text-transform:uppercase; margin:0px; height:31px;}
+h1.entry-title{font-size:22px!important; font-family:system-ui, 'myfont', Arial, Helvetica, sans-serif; color:#010f39!important; font-weight:bold!important;}
+.frm_form_fields { font-family:system-ui, 'myfont', Arial, Helvetica, sans-serif; font-size:14px; }
+
+
+.l-menu{ background:url(/wp-content/themes/ati/images/l-menu-bg.png) bottom; padding-bottom:25px; padding-left:19px; width:178px; padding-right:22px;}
+.l-menu ul{ position:relative; margin:0px; padding:0px; width:178px;}
+.l-menu ul li{ display:block; margin:0px; border-bottom:1px solid #ac9d4a; padding:3px 0px 3px 20px; width:155px;}
+.l-menu ul li a{ font-size:16px; font-family:system-ui, 'myfont'; color:black; text-decoration:none;}
+.l-menu ul li:not(#menu-item-790):not(#menu-item-842) ul li:hover a{ font-size:16px; font-family:system-ui, 'myfont'; color:white; text-decoration:none;}
+.l-menu ul li:hover{ background:#d9d1a6;}
+.l-menu ul li.current-menu-item{background:#ac9d4a;}
+.l-menu ul li ul{ padding:0px; margin:0px; position:relative;
+font-weight: normal;
+    font-style: normal;
+    font-size: normal; }
+.l-menu ul li#menu-item-790, .l-menu ul li#menu-item-842{ background:none; }
+.l-menu ul li#menu-item-790>a, .l-menu ul li#menu-item-842>a {
+    font-weight: bold;
+    font-style: italic;
+    font-size: x-large;
+    text-decoration:underline;
+}
+.l-menu ul li ul li{ display:block; margin:0px; border-bottom:1px solid #ac9d4a; padding:3px 0px 3px 10px; width:145px;}
+.l-menu ul li ul li:last-child{ border:none;}
+
+
+#slider{ background:url(/wp-content/themes/ati/images/slider-bg.png) repeat-y top center; width:1160px; height:467px; overflow:hidden; margin:auto;}
+.inner-slider{background:url(/wp-content/themes/ati/images/slider-bg.png) repeat-y top center; width:980px; height:280px; overflow:hidden; margin:auto;}
+#main{position:relative;width:940px;margin: 0 auto; padding:0px 20px 10px 20px;background:#fff; no-repeat top left; z-index: 99;}
+.wp-caption-text{}
+.gallery-caption{}
+.bypostauthor{}
+.sticky{}
+/** END WordPress-Defined CSS Classes **/
+#home_top_shdw{position: absolute;top:0; z-index: 999;width: 100%; background: url(/wp-content/themes/ati/images/top_shdw.png) repeat-x transparent;height: 35px;}
+header{}
+
+.cl{ clear:both;}
+header div#main-header{position:relative;width:940px;margin: 0 auto; padding:0px 20px 0px 20px;background:#fff; no-repeat top left; z-index: 99999999;}
+div#main-header .logo{ float:left; width:215px;}
+div#main-header .m-container{ float:right; width:700px; padding-top:10px;}
+div#main-header .m-container ul{ position:relative; padding:0px; margin:0px; list-style:none;}
+div#main-header .m-container ul li{ float:left; display:inline; padding:6px 6px; position:relative; list-style-type:none; background:url(/wp-content/themes/ati/images/sep.png) no-repeat right 26px;}
+div#main-header .m-container ul li a{ color:#162d71; font-size:18px; font-family:system-ui, 'myfont'; padding:0px 10px;}
+div#main-header .m-container ul li ul li {white-space: nowrap;}
+div#main-header .m-container ul li ul { 
+    visibility:hidden;
+    opacity:0; 
+    color: #FFF;
+    background-color: #084b8d;
+    border-color: rgba(0,0,0,.7);
+    transition: opacity .3s ease-in-out;
+    position:absolute;
+    padding-top:10px;width:190px;left: 0;top: 50px; z-index:999999999!important;
+ }
+ div#main-header .m-container ul li:hover {
+     background-color: #43A3C7;
+ }
+div#main-header .m-container ul li:hover ul{   visibility:visible; opacity:1;/* background:url(/wp-content/themes/ati/images/menu_top0.png) no-repeat top left transparent; */}
+div#main-header .m-container ul li:hover ul li{ padding: 0 27px;position: relative; float:none; margin:0px;/*background: url(/wp-content/themes/ati/images/menu_item_bg.png) no-repeat top left;*/ display: block;height: 27px; position:relative; z-index:999999999!important;}
+div#main-header .m-container ul li:hover ul li a{ font-size:16px; color:#fff;}
+div#main-header .m-container ul li:hover ul li ul,
+div#main-header .m-container ul li:hover ul li:hover ul li ul { 
+    visibility:hidden;
+    opacity:0; 
+    border-color: rgba(0,0,0,.7);
+    transition: opacity .3s ease-in-out;
+    position:absolute;
+    padding-top:10px;width:190px;position: absolute;left:190px;top: -10px;
+}
+div#main-header .m-container ul li:hover ul li:hover ul,
+div#main-header .m-container ul li:hover ul li:hover ul li:hover ul {visibility:visible; opacity:1; position:absolute; /*background:url(/wp-content/themes/ati/images/menu_item_bg.png) no-repeat;*/}
+
+
+
+nav{position: absolute;bottom: 0;left: 18px;background: url(/wp-content/themes/ati/images/menu_bg.png) no-repeat transparent;width:950px;height: 52px;}
+header ul.menu{float: right;padding-right: 4px;}
+header ul.menu>li{float: left;  padding: 0 27px;position: relative;}
+header ul.menu>li > a{font-size: 18px;font-weight: bold; color:#fff;text-decoration: none;line-height: 52px;display: inline-block;padding: 0;margin: 0;}
+header ul.menu li:hover ul{display: block;}
+header ul.menu li ul{/*display:none;background:url(/wp-content/themes/ati/images/menu_top0.png) no-repeat top left transparent;*/padding-top:23px;width:190px;position: absolute;left: 0;top: 38px;}
+header ul.menu li ul li{background: url(/wp-content/themes/ati/images/menu_item_bg.png) no-repeat top left; display: block;height: 27px; width: 138px;}
+header ul.menu li ul li a{padding-left: 25px;font-size: 14px;font-weight: normal;text-decoration: none; color:#fff;}
+#content{position:relative;clear: both;min-height: 250px;}
+.home #content{ min-height:50px;}
+#sidebar{float: left;position: relative;top: -40px;z-index: 999;max-width: 220px;}
+#sidebar ul{margin: 0;padding: 0; padding-bottom: 32px;background: url(/wp-content/themes/ati/images/sidemenu_btm_bg.png) no-repeat bottom left;}
+#sidebar .sidebar_title{background: url(/wp-content/themes/ati/images/menu_top.png) top left transparent; width: 187px;height: 67px;color: #fff;font-size: 30px;padding-left: 20px;line-height: 80px;font-weight: bold;text-shadow: 2px 1px 3px hsla(0, 0%, 13%,0.5);}
+#sidebar ul li{list-style: none;padding: 0;margin: 0;background: url(/wp-content/themes/ati/images/sidemenu_item_bg.png) no-repeat top left transparent;width: 187px;height:27px;padding-left: 20px;}
+#sidebar ul li a{text-decoration: none;color: #fff; font-size: 14px;}
+#sidebar ul li.current_page_item{background-image: url(/wp-content/themes/ati/images/sidemenu_active_bg.png);}
+.frm_form_fields div>div{margin:10px;position: relative;} 
+.frm_form_fields input{background: url(/wp-content/themes/ati/images/input_bg.png) no-repeat top left;width: 323px;border: none 0px;line-height: 35px;height: 35px;padding: 0 10px;}
+.frm_form_fields textarea{background: url(/wp-content/themes/ati/images/textarea_bg.png) no-repeat top left;width: 325px;border: none 0px;padding: 0 10px;height: 72px !important;padding: 10px;}
+.frm_form_fields input:focus,.frm_form_fields textarea:focus{border:0px;}
+.frm_forms{position: relative;}
+.frm_forms .submit input{color: rgba(255, 0, 0, 0);;background: url(/wp-content/themes/ati/images/send_btn.png) no-repeat top left transparent;width:136px;height:52px;border: 0px none;bottom: -37px;float: right;margin-top: -25px;margin-right:232px;font-size: 0px;}
+.frm_error_style,.frm_error{font-size: 12px;color:red;}
+.frm_error{font-weight: bold;padding-left: 110px;}
+h1.entry-title{color:#405386;font-weight: normal;font-size: 24px;margin: 0;}
+article.page{padding: 15px 0 10px 0;}
+#sidebar+article.page{width: 570px;margin-left: 280px;}
+#comments{ display:none;}
+.foot{ padding-top:12px; padding-top:18px;}
+.foot .foot-left{ float:left;  color:#8493b8;}
+.foot .foot-right{ float:right; font-size:11px; color:#8493b8;}
+.foot .foot-right a{color:#8493b8; text-decoration:none; color:#8493b8;}
+
+.entry-content p{ font-size:13px; font-family:system-ui, 'myfont', Arial, Helvetica, sans-serif!important; line-height:23px; font-weight:normal; padding:0px 10px;}
+.entry-content p span{font-size:13px; font-family:system-ui, 'myfont', Arial, Helvetica, sans-serif!important; }
+
+#news{float: right;width:307px;height: 192px;background: url(/wp-content/themes/ati/images/news_bg.png) no-repeat top left transparent;font-weight: normal;margin-left: 30px;}
+#news h3{color:#fcdd02;margin: 0;font-weight: normal;line-height: 35px;padding-left: 25px;}
+#news_ticker{color:#fff;font-size: 12px;width: 260px;margin: 10px auto;}
+#news_ticker a{color:#fcdd02;}
+footer{width: 940px;margin: 0 auto; font-size:12px; background:#fff; text-decoration: none;padding: 10px 20px 10px 20px;}
+.entry-meta{ display:none;}
+#colophon #third{ display:none;}
+
+.main-foot{ border-top:1px solid #ccc;}
+
+footer #text-2{ float:left; width:200px;}
+#nav_menu-2{ float:right; padding-top:15px;}
+#text-3{ float:right; padding-top:15px;}
+
+#nav_menu-2 ul{ padding:0px; margin:0px; position:relative; padding-right:10px;}
+#nav_menu-2 ul li{ display:inline; float:right; padding:0px 8px; border-right:1px solid #ccc;}
+#nav_menu-2 ul li:first-child{}
+#nav_menu-2 ul li a:hover{ color:#162D71;}
+
+footer .menu ul{margin: 0;padding: 0;}
+footer .menu>ul>li{float: left;width: 90px;margin-left: 20px;font-weight: bold;}
+footer hr{clear: both;}
+footer .menu li{list-style: none;padding: 0;font-weight: normal;}
+footer .menu li a{font-size: 11px;color:#a5a9b5;text-decoration: none;}
+.no-margin{margin: 0;}
+.list_item img{max-width: 175px;padding: 0 10px;float: left;}
+article.category-list{;float: left;margin: 14px 15px 0 0;/*width: 420px*/}
+#sidebar_btm {
+    width: 207px;
+}
+.list_item_content {
+    margin-left: 173px;
+    margin-top: -19px;
+}
+.list-class {
+  font-size: 19px;
+  color: #3f5587;
+  font-weight: bold;
+  text-decoration: none;
+}
+.entry-content img {
+    padding: 10px;
+}
+.frm_forms { 
+font-family: georgia;
+}
+
+
+
+.slider { background:url(/wp-content/themes/ati/images/shadow-bg.png) no-repeat bottom;
+	height:467px; z-index:99; 
+	overflow: hidden;
+	position: relative;
+	width: 1160px;
+}
+
+
+.caption h3{ font-size:35px; }
+#s2 .caption h3{ font-size:40px;  font-weight:normal; font-family:Georgia, "Times New Roman", Times, serif;}
+#s2 .caption h3{ font-size:30px; line-height:40px;  font-weight:bold; font-family:Georgia, "Times New Roman", Times, serif; }
+#s2 .caption{ bottom:190px;}
+
+#s3 .caption h3{ font-size:35px!important; line-height:40px; font-weight:bold; font-family:Georgia, "Times New Roman", Times, serif; color:#fff;}
+#s3 .caption{ bottom:180px;}
+#s3 .caption h3 span{ padding-left:100px; display:block;  font-weight:bold; font-family:Georgia, "Times New Roman", Times, serif;}
+
+#s4 .caption h3{ font-size:35px; line-height:40px; color:#142b73; font-weight:bold; font-family:Georgia, "Times New Roman", Times, serif; }
+#s4 .caption{ bottom:180px;}
+
+#s5 .caption h3{ font-size:35px; line-height:35px; color:#142b73;  font-weight:bold; font-family:Georgia, "Times New Roman", Times, serif; }
+#s5 .caption{ bottom:180px;}
+#s5 .caption h3 span{ font-size:20px!important;  line-height:25px;  font-weight:bold; font-family:Georgia, "Times New Roman", Times, serif;}
+#s5 .caption p{ width:300px; font-size:14px; color:#142b73; line-height:23px;  font-weight:normal; font-family:Georgia, "Times New Roman", Times, serif;}
+
+#pix_pag, #pix_canvas{ display:none;}
+
+.slider > div {
+	display: none;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+#pix_prev, #pix_next {
+	cursor: pointer;
+	display: block;
+	height: 40px;
+	margin-top: -20px;
+	position: absolute;
+	top: 50%;
+	width: 40px;
+	z-index: 1001;
+}
+#pix_prev {
+	background: url(/wp-content/themes/ati/images/diapo/prev.png) no-repeat;
+	left: 10px;
+}
+#pix_next {
+	background: url(/wp-content/themes/ati/images/diapo/next.png) no-repeat;
+	left: auto!important;
+	right: 10px!important;
+}
+#pix_pag {
+	margin: 0 auto;
+	position: relative;
+	width: 940px;
+	z-index: 1002;
+}
+#pix_commands {
+	cursor: pointer;
+	display: block;
+	float: left;
+	height: 26px;
+	margin: 15px 0 0 13px;
+	position: relative;
+	width: 24px;
+}
+#pix_play {
+	background: url(/wp-content/themes/ati/images/diapo/play.png) center no-repeat;
+	height: 24px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 24px;
+}
+#pix_stop {
+	background: url(/wp-content/themes/ati/images/diapo/pause.png) center no-repeat;
+	height: 24px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 24px;
+}
+#pix_pag_ul {
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+#pix_pag_ul > li {
+	cursor: pointer;
+	display: block;
+	.display: inline-block;
+	float: left;
+	list-style: none;
+	margin: 0 10px 0 0;
+	padding: 20px 8px 0;
+	text-align: center;
+	text-indent: -9999px;
+	width: 16px;
+}
+#pix_pag_ul > li > span {
+	background: #222;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	display: block;
+	height: 16px;
+	width: 16px;
+}
+#pix_pag_ul > li:hover > span > span {
+	background: #ccc;
+}
+#pix_pag_ul > li > span > span {
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	display: block;
+	float: left;
+	height: 8px;
+	margin: 4px;
+	width: 8px;
+}
+#pix_pag_ul > li.diapocurrent > span > span {
+	background: #ff0;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+#pix_pag_ul > li > .pix_thumb {
+	border: 4px solid #f2f2f2;
+	.border: 4px solid #e6e6e6;
+	border: 4px solid #e6e6e6\9;
+	-moz-box-shadow: 0 1px 8px #000;
+	-webkit-box-shadow: 0 1px 8px #000;
+	box-shadow: 0 1px 8px #000;
+	height: 58px;
+ 	left: -17px;
+	position: absolute;
+	top: -40px;
+	width: 58px;
+}
+#pix_pag_ul > li > .thumb_arrow {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid  #e6e6e6;
+	top: 26px;
+	left: 12px;
+	position: absolute;
+}
+.pix_relativize {
+	overflow: hidden;
+	position: relative;
+}
+.imgFake {
+	cursor: pointer;
+}
+.elemHover {
+	position: absolute;
+}
+.caption {
+	
+	color: #fff;
+	display: block;
+	font-size: 13px;
+	padding: 20px;
+	bottom:220px; left:30px;
+}
+.ui-loader {
+	display: none;
+}
+
+#post-37  {display: none;}
+
+/*
+     FILE ARCHIVED ON 15:12:21 Dec 13, 2013 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 17:53:33 May 02, 2017.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+
+
+
+
+.list-horizontal li{
+	display:inline-block;
+}
+.list-horizontal li:before {
+	content: '\00a0\2022\00a0\00a0';
+	color:#999;
+	color:rgba(0,0,0,0.5);
+	font-size:11px;
+}
+.list-horizontal li:first-child:before {
+	content: '';
+}
+
+
+
+#menu-main-menu li{
+    font-weight:bold;
+}
+#menu-main-menu li:hover{
+    background-color: green;
+}
+
+.middled {
+    display: block;
+    margin: 0px auto;
+}

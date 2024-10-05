@@ -1,0 +1,25 @@
+img.page_icon, img.category_icon {
+    padding:0px 10px;
+    vertical-align: middle;
+    margin-bottom: .25em;
+    text-decoration:none;
+    /*
+    width:28px;
+    height:28px;/**/
+}
+
+.page_item a, .cat-item a{
+    text-decoration:none;
+}
+
+#sidebar li.page_item:before, #sidebar li.cat-item:before {
+   content: "";
+}
+/*
+     FILE ARCHIVED ON 15:15:03 Dec 13, 2013 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 17:53:47 May 02, 2017.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
